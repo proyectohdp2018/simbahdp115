@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UT8-8">
+
+  
+	
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+	
+  <!--<link rel="stylesheet" type="text/css" href="{static 'css/bootstrap.min.css'}">-->
+	<title>{% block title%} Documentt {% endblock %}</title>
+
+	{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+<div class="container">
+  <a class="navbar-brand" href="./"><b>Bsim</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+<ul class="navbar-nav mr-auto">
+       
+<li class="nav-item">
+        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+       
+<li class="nav-item">
+        <a class="nav-link" href="#">Consulta historial</a>
+      </li>
+ 
+    </ul>
+ 
+<form class="form-inline my-2 my-lg-0">
+    
+      
+    </form>
+ 
+      <a class="btn btn-outline-success d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">REGISTRATE</a>
+      <a class="btn btn-outline-info d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">INGRESAR</a>
+ 
+  </div>
+ 
+  </div>
+ 
+</nav>
+   {% endblock %}﻿	
+</head>
+<body>
+	{% block header %}
+	{% include 'base/header.html' %}
+	{% endblock %}
+
+	{% block content %}
+	<h5>prueba content</h5>
+	{% endblock %}
+
+	{% block footer %}
+	<h6> pruebafooter base</h6>
+	{% endblock %}
+
+
+
+ <-script scr = "https://code.jquery.com/jquery-3.3.1.min.map"><=/script>
+
+ <-script src="{% static 'js/bootstrap.min.js'}"><-/script>
+
+
+	{% block extrajs %}
+  
+	{% endblock %}
+
+  
+
+	
+</body>
+</html>
