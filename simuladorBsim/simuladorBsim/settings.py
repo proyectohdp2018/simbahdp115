@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'simuladorBsim.wsgi.application'
 
 DATABASES = {
    'default': {
-        'ENGINE': 'mysql_cymysql',
+        'ENGINE': 'mysql',
         'NAME': 'simuladorbsim',
         'USER': 'root',
         'PASSWORD': 'Minerva',
