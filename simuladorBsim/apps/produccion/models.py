@@ -6,7 +6,10 @@ class Cosecha(models.Model):
 	grosorTallo = models.DecimalField(max_digits = 5, decimal_places = 2)
 	numeroHojas = models.DecimalField(max_digits = 5, decimal_places = 2)
 	pesoRacimo = models.DecimalField(max_digits = 5, decimal_places = 2)
-
+	costoHectarea = models.DecimalField(max_digits = 5, decimal_places = 2,null = True)
+	kgCosechados = models.IntegerField(null = True)
+	precioKg =  models.DecimalField(max_digits = 5, decimal_places = 2,null = True)
+	utilidadEsperada = models.IntegerField(null = True)
 
 class Produccion(models.Model):
 	costoHectarea = models.DecimalField(max_digits = 5, decimal_places = 2)
