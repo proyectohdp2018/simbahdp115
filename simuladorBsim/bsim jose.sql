@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema simuladorbsim
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `simuladorbsim` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+CREATE SCHEMA IF NOT EXISTS `simuladorbsim` DEFAULT CHARACTER SET utf8COLLATE utf8mb4_0900_ai_ci ;
 USE `simuladorbsim` ;
 
 -- -----------------------------------------------------
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_group` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name` (`name` ASC))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`django_content_type` (
   UNIQUE INDEX `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label` ASC, `model` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 11
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -60,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_permission` (
     REFERENCES `simuladorbsim`.`django_content_type` (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 31
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -81,8 +81,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_group_permissions` (
     FOREIGN KEY (`group_id`)
     REFERENCES `simuladorbsim`.`auth_group` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -104,8 +104,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_user` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -125,8 +125,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_user_groups` (
     FOREIGN KEY (`user_id`)
     REFERENCES `simuladorbsim`.`auth_user` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -146,8 +146,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`auth_user_user_permissions` (
     FOREIGN KEY (`user_id`)
     REFERENCES `simuladorbsim`.`auth_user` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -172,8 +172,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`django_admin_log` (
     FOREIGN KEY (`user_id`)
     REFERENCES `simuladorbsim`.`auth_user` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -187,8 +187,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`django_migrations` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 23
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -201,8 +201,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`django_session` (
   PRIMARY KEY (`session_key`),
   INDEX `django_session_expire_date_a5c62663` (`expire_date` ASC))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -221,8 +221,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`produccion_cosecha` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 10
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -241,8 +241,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`produccion_produccion` (
     FOREIGN KEY (`cosecha_id`)
     REFERENCES `simuladorbsim`.`produccion_cosecha` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -254,8 +254,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`registro_usuario` (
   `correo` VARCHAR(254) NOT NULL,
   PRIMARY KEY (`nombre`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -297,8 +297,8 @@ CREATE TABLE IF NOT EXISTS `simuladorbsim`.`simulacion_simulacioncostoproduccion
     REFERENCES `simuladorbsim`.`auth_user` (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
