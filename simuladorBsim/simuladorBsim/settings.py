@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'simuladorBsim.wsgi.application'
 
 DATABASES = {
    'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'simuladorbsim',
         'USER': 'root',
         'PASSWORD': 'Minerva',
